@@ -35,6 +35,8 @@
         <AssociationConnector Association="ERPModel.FK_Invoices_Users" ManuallyRouted="false" />
         <AssociationConnector Association="ERPModel.FK_Leave_requests_Users1" ManuallyRouted="false" />
         <AssociationConnector Association="ERPModel.FK_Liabilities_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ERPModel.Token" Width="1.5" PointX="3" PointY="22.375" />
+        <AssociationConnector Association="ERPModel.FK_Tokens_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

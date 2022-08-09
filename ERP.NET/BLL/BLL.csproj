@@ -42,14 +42,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\EmployeeModel.cs" />
+    <Compile Include="Entities\IssueModel.cs" />
+    <Compile Include="Entities\LeaveRequestModel.cs" />
+    <Compile Include="Entities\ProductModel.cs" />
+    <Compile Include="Entities\TokenModel.cs" />
+    <Compile Include="Entities\UserModel.cs" />
+    <Compile Include="Entities\WarehouseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ProductManagerServices\ProductManagerIssueServices.cs" />
+    <Compile Include="Services\ProductManagerServices\ProductServices.cs" />
+    <Compile Include="Services\ProductManagerServices\TokenServices.cs" />
+    <Compile Include="Services\ProductManagerServices\WareHouseServices.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Services\CommonServices\" />
     <Folder Include="Services\FinanceManagerServices\" />
     <Folder Include="Services\HrServices\" />
-    <Folder Include="Services\ProductManagerServices\" />
     <Folder Include="Services\SalesManagerServices\" />
   </ItemGroup>
   <ItemGroup>

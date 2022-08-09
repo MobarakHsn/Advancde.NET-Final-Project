@@ -48,5 +48,6 @@ namespace DAL.EF
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Warehouse> Warehouses { get; set; }
+        public virtual DbSet<Token> Tokens { get; set; }
     }
 }

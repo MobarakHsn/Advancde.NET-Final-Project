@@ -22,6 +22,7 @@ namespace DAL.EF
             this.Invoices = new HashSet<Invoice>();
             this.Leave_requests = new HashSet<Leave_requests>();
             this.Liabilities = new HashSet<Liability>();
+            this.Tokens = new HashSet<Token>();
         }
     
         public int id { get; set; }
@@ -51,5 +52,7 @@ namespace DAL.EF
         public virtual ICollection<Leave_requests> Leave_requests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Liability> Liabilities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Token> Tokens { get; set; }
     }
 }
