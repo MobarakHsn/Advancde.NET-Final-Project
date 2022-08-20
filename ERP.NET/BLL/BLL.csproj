@@ -45,8 +45,10 @@
     <Compile Include="Entities\EmployeeModel.cs" />
     <Compile Include="Entities\IssueModel.cs" />
     <Compile Include="Entities\LeaveRequestModel.cs" />
+    <Compile Include="Entities\ListedProductModel.cs" />
     <Compile Include="Entities\ProductModel.cs" />
     <Compile Include="Entities\TokenModel.cs" />
+    <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Entities\UserModel.cs" />
     <Compile Include="Entities\WarehouseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

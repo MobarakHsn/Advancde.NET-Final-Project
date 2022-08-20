@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PL.Controllers.ProductManagerController
 {
+    [EnableCors("*", "*", "*")]
     public class ProductManagerIssueController : ApiController
     {
         [Route("api/ProductManager/issues")]

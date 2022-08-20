@@ -12,8 +12,10 @@ namespace DAL.EF
     using System;
     using System.Collections.Generic;
     
+
     public partial class Order
     {
+        
         public int id { get; set; }
         public int customer_id { get; set; }
         public string order_description { get; set; }

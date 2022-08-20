@@ -97,5 +97,29 @@ namespace BLL.Services.ProductManagerServices
         {
             return DataAccessFactory.WareHouseDataAccess().Delete(id);
         }
+
+        public static WarehouseModel GetByName(string name)
+        {
+            var item = DataAccessFactory.WareHouseDataAccessName().GetByName(name);
+            if (item != null)
+            {
+                var warehouse = new WarehouseModel()
+                {
+                    id = item.id,
+                    name = item.name,
+                    phone = item.phone,
+                    quantity = item.quantity,
+                    remaining_quantity = item.remaining_quantity,
+                    status = item.status,
+                    zip_code = item.zip_code,
+                    description = item.description,
+                    country = item.country,
+                    city = item.city,
+                    address = item.address
+                };
+                return warehouse;
+            }
+            return null;
+        }
     }
 }

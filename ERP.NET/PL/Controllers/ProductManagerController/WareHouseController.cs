@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PL.Controllers.ProductManagerController
 {
+    [EnableCors("*", "*", "*")]
     public class WareHouseController : ApiController
     {
         [Route("api/warehouses")]
@@ -48,6 +50,14 @@ namespace PL.Controllers.ProductManagerController
         public HttpResponseMessage Update(WarehouseModel warehouse)
         {
             var data = WareHouseServices.Update(warehouse);
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
+
+        [Route("api/warehouse/ByName/{name}")]
+        [HttpGet]
+        public HttpResponseMessage GetByName(string name)
+        {
+            var data = WareHouseServices.GetByName(name);
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
     }

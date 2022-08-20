@@ -52,42 +52,57 @@ namespace BLL.Services.ProductManagerServices
             return DataAccessFactory.ProductManagerTokenDataAccess().Delete(token);
         }
 
-
         public static List<TokenModel> Get()
         {
             var data = DataAccessFactory.ProductManagerTokenDataAccess().Get();
             var tokens = new List<TokenModel>();
             foreach (var item in data)
             {
-                UserModel user = new UserModel()
-                {
-                    id=item.User.id,
-                    dob=item.User.dob,
-                    address=item.User.address,
-                    email=item.User.email,
-                    firstname=item.User.firstname,
-                    organization_id=item.User.organization_id,
-                    gender=item.User.gender,
-                    lastname=item.User.lastname,
-                    password=item.User.password,
-                    phone=item.User.phone,
-                    position=item.User.position,
-                    type=item.User.type,
-                    username=item.User.username,
-                    user_status=item.User.user_status
-                };
+                
                 tokens.Add(new TokenModel()
                 {
                     id = item.id,
                     CreatedAt=item.CreatedAt,
                     ExpiredAt=item.ExpiredAt,
                     Token1=item.Token1,
-                    User = user,
                     UserId=item.UserId
 
                 });
             }
             return tokens;
+        }
+        public static TokenModel Get(string token)
+        {
+            var item = DataAccessFactory.ProductManagerTokenDataAccess().Get(token);
+            if (item == null) return null;
+            return new TokenModel()
+            {
+                id = item.id,
+                CreatedAt = item.CreatedAt,
+                ExpiredAt = item.ExpiredAt,
+                Token1 = item.Token1,
+                UserId = item.UserId
+            };
+        }
+        public static bool Update(TokenModel item)
+        {
+            var token = new Token()
+            {
+                id = item.id,
+                CreatedAt = item.CreatedAt,
+                ExpiredAt = item.ExpiredAt,
+                Token1 = item.Token1,
+                UserId = item.UserId
+            };
+            return DataAccessFactory.ProductManagerTokenDataAccess().Update(token);
+        }
+
+        public static List<UserLog> TokenByDate(string date)
+        {
+            var item = DataAccessFactory.ProductManagerTokenDataAccess().Get();
+            var x = DateTime.Parse(date).Date;
+            var data= (from n in item where DateTime.Parse(n.CreatedAt.ToString()).Date>=DateTime.Parse(date).Date select new UserLog{ UserId= (int)n.UserId,Username=n.User.username,Email=n.User.email,TokenCreatedAt= (DateTime)n.CreatedAt,TokenExpiredAt=n.ExpiredAt}).ToList();
+            return data;
         }
     }
 }

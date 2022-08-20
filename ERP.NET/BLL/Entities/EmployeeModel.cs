@@ -8,6 +8,7 @@ namespace BLL.Entities
 {
     public class EmployeeModel
     {
+
         public int id { get; set; }
         public Nullable<int> employee_id { get; set; }
         public string employee_name { get; set; }
