@@ -76,7 +76,7 @@ namespace BLL.Services.ProductManagerServices
                 status_purchase = item.status_purchase,
                 dimention_unit = item.dimention_unit,
                 product_description = item.product_description,
-                product_condition = item.product_condition,
+                product_condition = "good",
                 product_name = item.product_name,
                 tax = item.tax,
                 warehouse_name = item.warehouse_name,

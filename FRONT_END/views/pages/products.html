@@ -1,0 +1,19 @@
+<div>
+  <h1>Products</h1>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Nature</th>
+        <th>Product Condition</th>
+        <th>Description</th>
+      </tr>
+      <tr ng-repeat="p in products">
+          <td>{{p.id}}</td>
+          <td>{{p.product_name}}</td>
+          <td>{{p.nature}}</td>
+          <td>{{p.product_condition}}</td>
+          <td>{{p.product_description}}</td>
+      </tr>
+    </table>
+</div>
