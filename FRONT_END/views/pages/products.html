@@ -7,6 +7,8 @@
         <th>Nature</th>
         <th>Product Condition</th>
         <th>Description</th>
+        <th>Delete</th>
+        <th>Update</th>
       </tr>
       <tr ng-repeat="p in products">
           <td>{{p.id}}</td>
@@ -14,6 +16,8 @@
           <td>{{p.nature}}</td>
           <td>{{p.product_condition}}</td>
           <td>{{p.product_description}}</td>
+          <td><a href="#!delete/{{p.id}}">Delete</a></td>
+          <td><a href="#!update/{{p.id}}">Update</a></td>
       </tr>
     </table>
 </div>

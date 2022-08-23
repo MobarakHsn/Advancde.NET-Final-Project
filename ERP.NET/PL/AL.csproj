@@ -150,10 +150,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FinanceManagerController\FinanceManager_basicController.cs" />
+    <Compile Include="Controllers\FinanceManagerController\FinanceManager_BudgetingController.cs" />
+    <Compile Include="Controllers\FinanceManagerController\FinanceManager_InvoiceController.cs" />
+    <Compile Include="Controllers\FinanceManagerController\FinanceManager_ProfessionalController.cs" />
+    <Compile Include="Controllers\HrController\EmployeeController.cs" />
+    <Compile Include="Controllers\HrController\ExpenseController.cs" />
+    <Compile Include="Controllers\HrController\LeaveRequestController.cs" />
+    <Compile Include="Controllers\HrController\ProfileController.cs" />
+    <Compile Include="Controllers\HrController\UserController.cs" />
     <Compile Include="Controllers\ProductManagerController\ProductController.cs" />
     <Compile Include="Controllers\ProductManagerController\ProductManagerIssueController.cs" />
     <Compile Include="Controllers\ProductManagerController\ProductManagerTokenController.cs" />
     <Compile Include="Controllers\ProductManagerController\WareHouseController.cs" />
+    <Compile Include="Controllers\SalesManagerController\CustomerController.cs" />
+    <Compile Include="Controllers\SalesManagerController\OrderController.cs" />
+    <Compile Include="Controllers\SalesManagerController\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -171,9 +183,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\CommonController\" />
-    <Folder Include="Controllers\FinanceManagerController\" />
-    <Folder Include="Controllers\HrController\" />
-    <Folder Include="Controllers\SalesManagerController\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

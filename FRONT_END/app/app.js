@@ -10,6 +10,18 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
         templateUrl : "views/pages/create.html",
         controller: 'create'
     })
+    .when("/home", {
+        templateUrl : "views/pages/home.html",
+        controller: 'create'
+    })
+    .when("/delete/:id", {
+        templateUrl : "views/pages/home.html",
+        controller: 'delete'
+    })
+    .when("/update/:id", {
+        templateUrl : "views/pages/update.html",
+        controller: 'update'
+    })
     .otherwise({
         redirectTo:"/products"
     });

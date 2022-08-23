@@ -42,26 +42,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\AssetModel.cs" />
+    <Compile Include="Entities\BankModel.cs" />
+    <Compile Include="Entities\CustomerModel.cs" />
     <Compile Include="Entities\EmployeeModel.cs" />
+    <Compile Include="Entities\FinanceManagerPassModel.cs" />
+    <Compile Include="Entities\FinanceManager_EmailModel.cs" />
+    <Compile Include="Entities\Finance_payment_historiesModel.cs" />
+    <Compile Include="Entities\Hr_EmailModel.cs" />
+    <Compile Include="Entities\Hr_ExpenseModel.cs" />
+    <Compile Include="Entities\InvoiceModel.cs" />
     <Compile Include="Entities\IssueModel.cs" />
     <Compile Include="Entities\LeaveRequestModel.cs" />
+    <Compile Include="Entities\LiabilityModel.cs" />
     <Compile Include="Entities\ListedProductModel.cs" />
+    <Compile Include="Entities\OrderModel.cs" />
+    <Compile Include="Entities\OrganizationModel.cs" />
     <Compile Include="Entities\ProductModel.cs" />
     <Compile Include="Entities\TokenModel.cs" />
     <Compile Include="Entities\UserLog.cs" />
     <Compile Include="Entities\UserModel.cs" />
     <Compile Include="Entities\WarehouseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FinanceManagerServices\FinanceManagerBasicService.cs" />
+    <Compile Include="Services\FinanceManagerServices\FinanceManagerBudgetingService.cs" />
+    <Compile Include="Services\FinanceManagerServices\FinanceManagerProfessionalService.cs" />
+    <Compile Include="Services\HrServices\EmployeeService.cs" />
+    <Compile Include="Services\HrServices\ExpenseService.cs" />
+    <Compile Include="Services\HrServices\LeaveRequestService.cs" />
+    <Compile Include="Services\HrServices\ProfileService.cs" />
+    <Compile Include="Services\HrServices\UserService.cs" />
     <Compile Include="Services\ProductManagerServices\ProductManagerIssueServices.cs" />
     <Compile Include="Services\ProductManagerServices\ProductServices.cs" />
     <Compile Include="Services\ProductManagerServices\TokenServices.cs" />
     <Compile Include="Services\ProductManagerServices\WareHouseServices.cs" />
+    <Compile Include="Services\SalesManagerServices\CustomerServices.cs" />
+    <Compile Include="Services\SalesManagerServices\OrderServices.cs" />
+    <Compile Include="Services\SalesManagerServices\ProfileServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\CommonServices\" />
-    <Folder Include="Services\FinanceManagerServices\" />
-    <Folder Include="Services\HrServices\" />
-    <Folder Include="Services\SalesManagerServices\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
